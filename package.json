@@ -1,0 +1,18 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "Personal portfolio website showcasing full-stack development skills",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 8000",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "keywords": [
+    "portfolio",
+    "website",
+    "full-stack",
+    "developer"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
+}
