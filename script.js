@@ -99,7 +99,7 @@ const updateActiveLink = () => {
             navLinks.forEach(link => {
                 link.style.color = '';
                 if (link.getAttribute('href') === `#${sectionId}`) {
-                    link.style.color = '#6366f1';
+                    link.style.color = '#6b7c2e';
                 }
             });
         }
@@ -109,25 +109,37 @@ const updateActiveLink = () => {
 window.addEventListener('scroll', updateActiveLink);
 
 // ===== CONTACT FORM HANDLING =====
+// Initialize EmailJS with your public key
+(function() {
+    emailjs.init('R05SHYcRPiIolJWmt'); // Replace with your EmailJS public key
+})();
+
 const contactForm = document.getElementById('contactForm');
 
 contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
-    const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        message: document.getElementById('message').value
-    };
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton.textContent;
     
-    // Here you would typically send the form data to a backend service
-    // For now, we'll just show an alert
-    console.log('Form Data:', formData);
+    // Disable button and show loading state
+    submitButton.disabled = true;
+    submitButton.textContent = 'Sending...';
     
-    alert('Thank you for your message! This is a demo - to enable actual form submission, integrate with a backend service like Formspree, EmailJS, or your own API.');
-    
-    // Reset form
-    contactForm.reset();
+    // Send email using EmailJS
+    emailjs.sendForm('service_oc3uwhr', 'template_ajygz55', contactForm)
+        .then(() => {
+            alert('Thank you for your interest in me! I\'ll get back to you soon.');
+            contactForm.reset();
+        }, (error) => {
+            console.error('EmailJS Error:', error);
+            alert('Oops! Something went wrong. Please email me directly at c.m.odea86@gmail.com');
+        })
+        .finally(() => {
+            // Re-enable button
+            submitButton.disabled = false;
+            submitButton.textContent = originalButtonText;
+        });
 });
 
 // ===== TYPING EFFECT FOR HERO SUBTITLE (OPTIONAL) =====
@@ -177,5 +189,5 @@ skillTags.forEach((tag, index) => {
 });
 
 // ===== CONSOLE MESSAGE =====
-console.log('%c👋 Welcome to my portfolio!', 'color: #6366f1; font-size: 20px; font-weight: bold;');
-console.log('%cInterested in the code? Check out the repository on GitHub!', 'color: #8b5cf6; font-size: 14px;');
+console.log('%c👋 Welcome to my portfolio!', 'color: #6b7c2e; font-size: 20px; font-weight: bold;');
+console.log('%cInterested in the code? Check out the repository on GitHub!', 'color: #6b7c2e; font-size: 14px;');
