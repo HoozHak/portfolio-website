@@ -1,21 +1,21 @@
 # Portfolio Website
 
-A modern, responsive portfolio website built with vanilla HTML, CSS, and JavaScript. Designed to showcase your full-stack development skills with a clean, professional interface.
+A modern, responsive portfolio website built with vanilla HTML, CSS, and JavaScript.
 
-## ✨ Features
+## Features
 
-- 🎨 Modern, gradient hero section with animations
-- 📱 Fully responsive design (mobile, tablet, desktop)
-- 🎭 Smooth scrolling and page transitions
-- 💼 Sections for About, Skills, Projects, and Contact
-- 🔗 Social media integration
-- ⚡ Fast loading with no framework dependencies
-- 🎯 SEO-friendly structure
-- 🌐 Ready for GitHub Pages deployment
+- Modern, gradient hero section with animations
+- Fully responsive design (mobile, tablet, desktop)
+- Smooth scrolling and page transitions
+- Sections for About, Skills, Projects, and Contact
+- Social media integration
+- Fast loading with no framework dependencies
+- SEO-friendly structure
+- Ready for GitHub Pages deployment
 
-## 🚀 Free Hosting with GitHub Pages
+## Free Hosting with GitHub Pages
 
-This portfolio can be hosted **completely free** using GitHub Pages with your own custom domain!
+This portfolio can be hosted completely free using GitHub Pages with a custom domain.
 
 ### Deployment Steps
 
@@ -50,7 +50,7 @@ This portfolio can be hosted **completely free** using GitHub Pages with your ow
    - Click **Save**
    - Your site will be live at: `https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/`
 
-### 🌐 Using a Custom Domain (FREE!)
+### Using a Custom Domain (FREE)
 
 You can use your own domain with GitHub Pages for free:
 
@@ -110,20 +110,20 @@ If you don't want to use GitHub Pages, here are other free options:
    - Fast global CDN
    - Custom domains
 
-## 📝 Customization
+## Customization
 
-### Update Your Information
+### Update Information
 
 1. **index.html**
-   - Replace "Your Name" with your actual name
+   - Replace placeholder name with actual name
    - Update social media links (GitHub, LinkedIn, Twitter)
-   - Add your email address
+   - Add email address
    - Update project information
    - Modify skills and technologies
 
 2. **styles.css**
    - Change color scheme in CSS variables (lines 8-18)
-   - Adjust fonts, spacing, or layout as needed
+   - Adjust fonts, spacing, or layout
 
 3. **script.js**
    - Customize animations and interactions
@@ -136,22 +136,22 @@ To add more projects, duplicate a `.project-card` block in `index.html`:
 ```html
 <div class="project-card">
     <div class="project-image">
-        <img src="your-image-url" alt="Project Name">
+        <img src="project-image-url.jpg" alt="Project Name">
         <div class="project-overlay">
-            <a href="live-demo-url" class="project-link" target="_blank">
+            <a href="https://project-demo.com" class="project-link" target="_blank">
                 <i class="fas fa-external-link-alt"></i>
             </a>
-            <a href="github-repo-url" class="project-link" target="_blank">
+            <a href="https://github.com/username/repo" class="project-link" target="_blank">
                 <i class="fab fa-github"></i>
             </a>
         </div>
     </div>
     <div class="project-info">
         <h3>Project Name</h3>
-        <p>Project description...</p>
+        <p>Project description</p>
         <div class="project-tags">
-            <span>Tech1</span>
-            <span>Tech2</span>
+            <span>React</span>
+            <span>Node.js</span>
         </div>
     </div>
 </div>
@@ -175,7 +175,7 @@ The contact form currently shows an alert. To enable real submissions:
 - Add `netlify` attribute to form
 - Deploy on Netlify
 
-## 🛠️ Local Development
+## Local Development
 
 To test locally:
 
@@ -189,7 +189,7 @@ npx http-server
 # Then open: http://localhost:8000
 ```
 
-## 📦 Project Structure
+## Project Structure
 
 ```
 portfolio-website/
@@ -202,7 +202,7 @@ portfolio-website/
 └── README.md           # This file
 ```
 
-## 🎨 Technologies Used
+## Technologies Used
 
 - HTML5
 - CSS3 (Flexbox, Grid, Animations)
@@ -210,7 +210,7 @@ portfolio-website/
 - Font Awesome Icons
 - GitHub Pages (Hosting)
 
-## 📱 Browser Support
+## Browser Support
 
 - Chrome (latest)
 - Firefox (latest)
@@ -218,18 +218,18 @@ portfolio-website/
 - Edge (latest)
 - Mobile browsers (iOS Safari, Chrome Mobile)
 
-## 📄 License
+## License
 
 MIT License - feel free to use this template for your own portfolio!
 
-## 🤝 Contributing
+## Contributing
 
 Found a bug or have a suggestion? Feel free to open an issue or submit a pull request!
 
-## 📧 Contact
+## Contact
 
-Update the contact section with your information and let people reach out to you!
+Update the contact section with your information.
 
 ---
 
-**Built with ❤️ and hosted for FREE on GitHub Pages**
+Hosted for free on GitHub Pages.

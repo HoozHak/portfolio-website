@@ -129,11 +129,11 @@ contactForm.addEventListener('submit', (e) => {
     // Send email using EmailJS
     emailjs.sendForm('service_oc3uwhr', 'template_ajygz55', contactForm)
         .then(() => {
-            alert('Thank you for your interest in me! I\'ll get back to you soon.');
+            alert('Message sent successfully. I will get back to you soon.');
             contactForm.reset();
         }, (error) => {
             console.error('EmailJS Error:', error);
-            alert('Oops! Something went wrong. Please email me directly at c.m.odea86@gmail.com');
+            alert('Something went wrong. Please email me directly at c.m.odea86@gmail.com');
         })
         .finally(() => {
             // Re-enable button
@@ -189,5 +189,5 @@ skillTags.forEach((tag, index) => {
 });
 
 // ===== CONSOLE MESSAGE =====
-console.log('%c👋 Welcome to my portfolio!', 'color: #6b7c2e; font-size: 20px; font-weight: bold;');
-console.log('%cInterested in the code? Check out the repository on GitHub!', 'color: #6b7c2e; font-size: 14px;');
+console.log('%cWelcome to my portfolio!', 'color: #6b7c2e; font-size: 20px; font-weight: bold;');
+console.log('%cInterested in the code? Check out the repository on GitHub.', 'color: #6b7c2e; font-size: 14px;');
