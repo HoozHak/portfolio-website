@@ -188,6 +188,34 @@ skillTags.forEach((tag, index) => {
     }, index * 50);
 });
 
+// ===== RESUME DROPDOWN MOBILE SUPPORT =====
+const resumeDropdown = document.querySelector('.resume-dropdown');
+const dropdownToggle = document.querySelector('.dropdown-toggle');
+const dropdownMenu = document.querySelector('.dropdown-menu');
+
+if (resumeDropdown && dropdownToggle) {
+    // Toggle dropdown on mobile with click
+    dropdownToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdownMenu.classList.toggle('show-mobile');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!resumeDropdown.contains(e.target)) {
+            dropdownMenu.classList.remove('show-mobile');
+        }
+    });
+
+    // Close dropdown after selecting an option
+    const dropdownItems = document.querySelectorAll('.dropdown-item');
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', () => {
+            dropdownMenu.classList.remove('show-mobile');
+        });
+    });
+}
+
 // ===== CONSOLE MESSAGE =====
 console.log('%cWelcome to my portfolio!', 'color: #14b8a6; font-size: 20px; font-weight: bold;');
 console.log('%cInterested in the code? Check out the repository on GitHub.', 'color: #14b8a6; font-size: 14px;');

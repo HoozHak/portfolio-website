@@ -210,6 +210,86 @@ section {
     color: var(--primary-color);
 }
 
+/* Resume Dropdown */
+.resume-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dropdown-toggle i {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.resume-dropdown:hover .dropdown-toggle i {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 0.5rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: var(--shadow-lg);
+    min-width: 180px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.resume-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 0.75rem;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.875rem 1.5rem;
+    color: var(--text-dark);
+    text-decoration: none;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.dropdown-item:first-child {
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.dropdown-item:last-child {
+    border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.dropdown-item:hover {
+    background-color: var(--bg-light);
+    color: var(--primary-color);
+}
+
+.dropdown-item i {
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+
+/* Mobile dropdown show class */
+.dropdown-menu.show-mobile {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 0.75rem;
+}
+
 .social-links {
     display: flex;
     gap: 1.5rem;
@@ -606,13 +686,54 @@ section {
         font-size: 1.5rem;
     }
 
+    .hero-description {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
     .hero-buttons {
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
+        width: 100%;
+        padding: 0 1rem;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+
+    .resume-dropdown {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .dropdown-toggle {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .dropdown-menu {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 300px;
     }
 
     .about-content {
         grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-stats {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .stat-item {
+        padding: 1rem;
     }
 
     .contact-content {
@@ -626,6 +747,14 @@ section {
     section {
         padding: 3rem 0;
     }
+
+    .project-image {
+        height: 200px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 480px) {
@@ -637,8 +766,41 @@ section {
         font-size: 2rem;
     }
 
+    .hero-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .project-info h3 {
+        font-size: 1.3rem;
+    }
+
+    .project-info p {
+        font-size: 0.95rem;
+    }
+
     .projects-grid,
     .skills-grid {
         grid-template-columns: 1fr;
+    }
+
+    .about-stats {
+        flex-direction: column;
+    }
+
+    .stat-item h3 {
+        font-size: 2rem;
     }
 }
