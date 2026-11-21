@@ -99,7 +99,7 @@ const updateActiveLink = () => {
             navLinks.forEach(link => {
                 link.style.color = '';
                 if (link.getAttribute('href') === `#${sectionId}`) {
-                    link.style.color = '#6b7c2e';
+                    link.style.color = '#14b8a6';
                 }
             });
         }
@@ -189,5 +189,5 @@ skillTags.forEach((tag, index) => {
 });
 
 // ===== CONSOLE MESSAGE =====
-console.log('%cWelcome to my portfolio!', 'color: #6b7c2e; font-size: 20px; font-weight: bold;');
-console.log('%cInterested in the code? Check out the repository on GitHub.', 'color: #6b7c2e; font-size: 14px;');
+console.log('%cWelcome to my portfolio!', 'color: #14b8a6; font-size: 20px; font-weight: bold;');
+console.log('%cInterested in the code? Check out the repository on GitHub.', 'color: #14b8a6; font-size: 14px;');

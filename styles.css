@@ -6,12 +6,14 @@
 }
 
 :root {
-    --primary-color: #6b7c2e;
-    --secondary-color: #6b7c2e;
+    --primary-color: #14b8a6;
+    --secondary-color: #0d9488;
     --text-dark: #1f2937;
     --text-light: #6b7280;
     --bg-light: #f9fafb;
     --bg-white: #ffffff;
+    --bg-dark: #1e293b;
+    --bg-darker: #0f172a;
     --border-color: #e5e7eb;
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -120,14 +122,29 @@ section {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(135deg, #667eea 0%, #6b7c2e 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
     color: white;
     margin-top: 70px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(20, 184, 166, 0.1) 0%, transparent 50%);
+    pointer-events: none;
 }
 
 .hero-content {
     text-align: center;
     animation: fadeInUp 1s ease-out;
+    position: relative;
+    z-index: 1;
 }
 
 .hero-title {
@@ -137,7 +154,8 @@ section {
 }
 
 .highlight {
-    color: #fbbf24;
+    color: #14b8a6;
+    text-shadow: 0 0 20px rgba(20, 184, 166, 0.3);
 }
 
 .hero-subtitle {
@@ -415,6 +433,47 @@ section {
     border-radius: 0.25rem;
     font-size: 0.85rem;
     font-weight: 500;
+}
+
+/* Project Gradient Placeholders */
+.project-gradient-1 {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    border: 2px solid rgba(20, 184, 166, 0.3);
+}
+
+.project-gradient-2 {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    border: 2px solid rgba(20, 184, 166, 0.3);
+}
+
+.project-gradient-3 {
+    background: linear-gradient(135deg, #334155 0%, #475569 100%);
+    border: 2px solid rgba(20, 184, 166, 0.3);
+}
+
+.project-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.project-placeholder i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: #14b8a6;
+    opacity: 0.9;
+}
+
+.project-placeholder span {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #14b8a6;
+    opacity: 0.95;
 }
 
 /* ===== CONTACT SECTION ===== */
